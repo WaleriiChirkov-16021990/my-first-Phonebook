@@ -5,8 +5,8 @@ import com.wch.ProjectPhonebook.Models.Name;
 import java.util.Date;
 
 public abstract class Human {
-	private Name name;
-	private Date dateOfBirth;
+	private Name name = new Name();
+	private String dateOfBirth;
 	
 	
 	
@@ -22,11 +22,11 @@ public abstract class Human {
 	
 	
 	
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 	
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 }

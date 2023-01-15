@@ -1,31 +1,39 @@
 package com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT;
 
 import com.wch.ProjectPhonebook.Data.DataBase.DataBase;
-import com.wch.ProjectPhonebook.Data.DataFile.*;
+import com.wch.ProjectPhonebook.Models.AddNewContact;
+import com.wch.ProjectPhonebook.Models.Contact;
+import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
+
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Reader1 {
-//		BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Валерий Чирков\\IdeaProjects\\Phonebook\\src\\com\\wch\\ProjectPhonebook\\Data\\DataFile\\Data.txt"));
-	private BufferedReader reader = new BufferedReader(new FileReader("src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt"));
+	private final BufferedReader reader = new BufferedReader(new FileReader("src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt"));
+
 	private DataBase dataBase;
-	private String tempString;
+	private String line;
+	private ArrayList<String[]> base = new ArrayList<>();
+	private ArrayList<Contact> data = new ArrayList<>();
 	
-	public Reader1() throws IOException {
+	public ArrayList<Contact> getData() {
+		return data;
+	}
+	
+	public Reader1() throws FileNotFoundException {
+	
+	}
+	
+	public void readFile() throws IOException {
 		try{
-			StringBuilder stringBuilder = new StringBuilder();
-			String line = reader.readLine();
-			
-			while(line != null){
-				stringBuilder.append(line);
-				stringBuilder.append(System.lineSeparator());
-				line = reader.readLine();
+			while((line = reader.readLine()) != null){
+				base.add(line.split(","));
 			}
-			this.tempString =  stringBuilder.toString();
-			
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		} finally {
@@ -45,7 +53,35 @@ public class Reader1 {
 		return reader;
 	}
 	
-	public String getTempString() {
-		return tempString;
+	public String getLine () {
+		return line;
+	}
+	
+	public void ghostData() {
+		for (String[] c: this.base
+		     ) {
+			
+//			Contact contact = new Contact();
+//			for (int i = 0; i < c.length; i++) {
+//				if (i == 0) {
+//					contact.getName().setFirstName(c[i]);
+//				} else if (i==1) {
+//					contact.
+//				} else if (i==2) {
+//
+//				} else if (i==3) {
+//
+//				} else if (i==4) {
+//
+//				} else if (i==5) {
+//
+//				} else if (i==6) {
+//
+//				} else {
+//					new Printer("Ошибка данных !").print();
+//				}
+//			}
+			data.add(new AddNewContact(c[0],c[1], c[2],Integer.parseInt(c[3]), c[c.length-1]));
+		}
 	}
 }

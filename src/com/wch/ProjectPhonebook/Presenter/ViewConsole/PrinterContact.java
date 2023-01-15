@@ -16,25 +16,25 @@ public class PrinterContact extends Contact {
 	public void printCtc() {
 		for (int i = 0; i < 5; i++) {
 			if (i == 0) {
-				System.out.println(contact.getName().getFirstName());
+				new Printer("Name: " + contact.getName().getFirstName()).print();
 			} else if (i == 1) {
-				System.out.println(contact.getName().getLastName());
+				new Printer("LastName: " + contact.getName().getLastName()).print();
 			} else if (i == 2) {
-				System.out.println(contact.getDateOfBirth());
+				new Printer("Date of Birth: " + contact.getDateOfBirth()).print();
 			} else if (i == 3) {
 				if (contact.getNumber().getNumberHome() != 0) {
-					System.out.println(contact.getNumber().getNumberHome());
+					new Printer("Home number: " + contact.getNumber().getNumberHome()).print();
 				}
 				if (contact.getNumber().getNumberMobile() != 0) {
-					System.out.println(contact.getNumber().getNumberMobile());
+					new Printer("Mobile number" + contact.getNumber().getNumberMobile()).print();
 				}
 				if (contact.getNumber().getNumberWork() != 0) {
-					System.out.println(contact.getNumber().getNumberWork());
+					new Printer("Work number: " + contact.getNumber().getNumberWork()).print();
 				}
 			} else {
-				System.out.println(contact.getCommentary().getComment());
+				new Printer("Commentary: " + contact.getCommentary().getComment()).print();
 			}
 		}
-		System.out.println();
+		new Printer("").print();
 	}
 }

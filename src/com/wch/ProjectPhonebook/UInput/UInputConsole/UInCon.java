@@ -3,8 +3,8 @@ package com.wch.ProjectPhonebook.UInput.UInputConsole;
 import java.util.Scanner;
 
 public class UInCon {
-	Scanner scanner = new Scanner(System.in);
-	String input = null;
+	private Scanner scanner = new Scanner(System.in);
+	private String input = null;
 	
 	public UInCon(String input) {
 		this.input = input;
@@ -25,8 +25,8 @@ public class UInCon {
 		return input;
 	}
 	
-	public void UInput (){
-		System.out.print("Требуется ввод: ");
+	public void UInput (String s){
+		System.out.printf("%s ", s);
 		setInput(scanner.nextLine());
 	}
 }

@@ -1,7 +1,11 @@
 package com.wch.ProjectPhonebook.Models;
 
 import com.wch.ProjectPhonebook.Data.DataBase.DataBase;
+import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
+import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.function.Consumer;
@@ -9,11 +13,71 @@ import java.util.function.Consumer;
 public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
 	
 	private DataBase dataBase;
-	public Phonebook() {
+	private AddNewContact newContact;
+	private FinderContact finderContact;
+	private Reader2 reader2 = new Reader2();
+	private Reader1 reader1 = new Reader1();
+	private DeleterContact deleterContact;
+	private ChangeContact changeContact;
+	
+	public AddNewContact getNewContact() {
+		return newContact;
 	}
 	
-	public Phonebook(DataBase dataBase) {
-		this.dataBase = dataBase;
+	public void setNewContact(AddNewContact newContact) {
+		this.newContact = newContact;
+	}
+	
+	public FinderContact getFinderContact() {
+		return finderContact;
+	}
+	
+	public void setFinderContact(FinderContact finderContact) {
+		this.finderContact = finderContact;
+	}
+	
+	public Reader2 getReader2() {
+		return reader2;
+	}
+	
+	public void setReader2(Reader2 reader2) {
+		this.reader2 = reader2;
+	}
+	
+	public Reader1 getReader1() {
+		return reader1;
+	}
+	
+	public void setReader1(Reader1 reader1) {
+		this.reader1 = reader1;
+	}
+	
+	public DeleterContact getDeleterContact() {
+		return deleterContact;
+	}
+	
+	public void setDeleterContact(DeleterContact deleterContact) {
+		this.deleterContact = deleterContact;
+	}
+	
+	public ChangeContact getChangeContact() {
+		return changeContact;
+	}
+	
+	public void setChangeContact(ChangeContact changeContact) {
+		this.changeContact = changeContact;
+	}
+	
+	public Phonebook(ArrayList<Contact> data) throws FileNotFoundException {
+		this.dataBase = new DataBase(data);
+	}
+	
+	public Phonebook(DataBase dataBase) throws FileNotFoundException {
+		this.dataBase = new DataBase(dataBase);
+	}
+	
+	public Phonebook() throws FileNotFoundException{
+	
 	}
 	
 	/**
@@ -52,7 +116,16 @@ public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
 	 */
 	@Override
 	public int compare(Contact o1, Contact o2) {
-		return 0;
+		if (o1.getName().getFirstName().toLowerCase().equals(o2.getName().getFirstName().toLowerCase()) &&
+			o1.getName().getLastName().toLowerCase().equals(o2.getName().getLastName().toLowerCase())  &&
+			o1.getNumber().getNumberHome() == o2.getNumber().getNumberHome()  &&
+			o1.getNumber().getNumberWork() == o2.getNumber().getNumberWork()  &&
+			o1.getNumber().getNumberMobile() == o2.getNumber().getNumberMobile()  &&
+			o1.getDateOfBirth() == o2.getDateOfBirth()
+			) {
+			return 0;
+		}
+		return 1;
 	}
 	
 	/**

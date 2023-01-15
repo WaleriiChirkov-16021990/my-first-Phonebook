@@ -2,12 +2,13 @@ package com.wch.ProjectPhonebook.Models;
 
 import com.wch.ProjectPhonebook.Abstract.Class.Human;
 import com.wch.ProjectPhonebook.Abstract.Interface.AbleToCall;
+import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 
 import java.util.Date;
 
 public class Contact extends Human implements AbleToCall<Number> {
-	private Number number;
-	private Commentary commentary;
+	private Number number = new Number();
+	private Commentary commentary =  new Commentary();
 	
 	
 	public Contact() {
@@ -17,7 +18,7 @@ public class Contact extends Human implements AbleToCall<Number> {
 		this.number = number;
 	}
 	
-	public Contact(String firstName, String lastName,Date date, int number, String commentary){
+	public Contact(String firstName, String lastName,String date, int number, String commentary){
 		super.getName().setFirstName(firstName);
 		super.getName().setLastName(lastName);
 		super.setDateOfBirth(date);
@@ -35,7 +36,7 @@ public class Contact extends Human implements AbleToCall<Number> {
 	
 	@Override
 	public void getCall() {
-		System.out.println("Пока не доработан вызов! ( " + getNumber() + " )\n");
+		new Printer("Пока не доработан вызов! ( " + getNumber() + " )\n");
 	}
 	
 	@Override
@@ -45,6 +46,5 @@ public class Contact extends Human implements AbleToCall<Number> {
 	
 	@Override
 	public void setNumber(Number number) {
-	
 	}
 }

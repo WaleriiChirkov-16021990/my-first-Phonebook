@@ -21,10 +21,54 @@ public class UInterfaceCon {
 													"\n3.Удалить  " +
 													"\n4.Новый поиск " +
 													"\n5.Exit ";
+	
+	private final String enterFName = "\n1.Введите имя : ";
+	private final String enterLName = "\n1.Введите фамилию : ";
+	private final String enterNumber = "\n1.Введите телефон : ";
+	
+	public String getEnterFName() {
+		return enterFName;
+	}
+	
+	public String getEnterLName() {
+		return enterLName;
+	}
+	
+	public String getEnterNumber() {
+		return enterNumber;
+	}
+	
+	
+	
 	private final String menuFinderNotFindContact =     "\n1.Новый поиск " +
 														"\n2.Exit " ;
 	private final String menuDeleter = "";
 	private final String menuChange = "";
 	private final String menuWriterStart = "";
-	private final String instruction1 = "Для работы со мной, выберите нужный пункт в меню.";
+	private final String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
+	private final String instruction2 = "Возвращаюсь назад <= ";
+	
+	public String getInstruction2() {
+		return instruction2;
+	}
+	
+	public String getMenuFinderStart() {
+		return menuFinderStart;
+	}
+	
+	public String getInstruction1() {
+		return instruction1;
+	}
+	
+	public String getGreeting() {
+		return greeting;
+	}
+	
+	public String getMenuStart() {
+		return menuStart;
+	}
+	
+	public String getMenuReaderStart() {
+		return menuReaderStart;
+	}
 }

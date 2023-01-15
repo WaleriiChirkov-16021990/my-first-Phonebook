@@ -47,4 +47,8 @@ public class DataBase extends ArrayList<Contact> {
 	public void setDataBase(ArrayList<Contact> dataBase) {
 		this.dataBase = dataBase;
 	}
+//	public DataBase(){
+//
+//	}
+	
 }
