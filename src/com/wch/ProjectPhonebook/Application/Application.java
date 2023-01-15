@@ -21,9 +21,20 @@ public class Application {
 		while (true) {
 			new Printer(new UInterfaceCon().getMenuStart()).print();
 			uInCon.UInput(new UInterfaceCon().getInstruction1());
-			if (uInCon.getInput().equals("2")) {
+			if (uInCon.getInput().equals("1")) {
+			
+			} else if (uInCon.getInput().equals("2")) {
 				new PrinterPhonebook().printPB(phonebook.getDataBase());
+			} else if (uInCon.getInput().equals("3")) {
+			
+			} else if (uInCon.getInput().equals("4")) {
+			
+			} else if (uInCon.getInput().equals("5")) {
+			
+			} else if (uInCon.getInput().equals("6")) {
+			
 			} else if (uInCon.getInput().equals("7")) {
+				new Printer(new UInterfaceCon().getCloseApplication()).print();
 				break;
 			}
 

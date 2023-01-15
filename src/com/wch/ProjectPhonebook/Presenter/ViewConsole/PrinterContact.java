@@ -26,7 +26,7 @@ public class PrinterContact extends Contact {
 					new Printer("Home number: " + contact.getNumber().getNumberHome()).print();
 				}
 				if (contact.getNumber().getNumberMobile() != 0) {
-					new Printer("Mobile number" + contact.getNumber().getNumberMobile()).print();
+					new Printer("Mobile number: " + contact.getNumber().getNumberMobile()).print();
 				}
 				if (contact.getNumber().getNumberWork() != 0) {
 					new Printer("Work number: " + contact.getNumber().getNumberWork()).print();

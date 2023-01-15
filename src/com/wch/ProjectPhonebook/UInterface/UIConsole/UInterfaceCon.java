@@ -25,6 +25,11 @@ public class UInterfaceCon {
 	private final String enterFName = "\n1.Введите имя : ";
 	private final String enterLName = "\n1.Введите фамилию : ";
 	private final String enterNumber = "\n1.Введите телефон : ";
+	private final String closeApplication = "\nПрограмма завершена.";
+	
+	public String getCloseApplication() {
+		return closeApplication;
+	}
 	
 	public String getEnterFName() {
 		return enterFName;

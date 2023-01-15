@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="определена структура, начато описание классов.">
+    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterPhonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterPhonebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673724346518</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно.">
+      <created>1673798279097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673798279097</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,7 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="определена структура, начато описание классов." />
-    <option name="LAST_COMMIT_MESSAGE" value="определена структура, начато описание классов." />
+    <MESSAGE value="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно." />
+    <option name="LAST_COMMIT_MESSAGE" value="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
