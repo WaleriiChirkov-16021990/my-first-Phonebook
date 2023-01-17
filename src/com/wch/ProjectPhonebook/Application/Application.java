@@ -2,6 +2,7 @@ package com.wch.ProjectPhonebook.Application;
 
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
+import com.wch.ProjectPhonebook.Data.WriterData.WriterTXT.WriterMain;
 import com.wch.ProjectPhonebook.Models.*;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.PrinterPhonebook;
@@ -65,7 +66,7 @@ public class Application {
 				changeContact.addFindContact();
 				changeContact.changeContact();
 			} else if (uInCon.getInput().equals("7")) {   // записать книгу в файл
-			
+				WriterMain writerMain = new WriterMain(phonebook.getDataBase());
 			} else if (uInCon.getInput().equals("8")) {   //  выход
 				new Printer(UInterfaceCon.getCloseApplication()).print();
 				break;

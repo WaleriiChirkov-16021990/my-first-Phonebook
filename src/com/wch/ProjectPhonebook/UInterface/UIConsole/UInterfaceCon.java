@@ -137,7 +137,6 @@ public class UInterfaceCon {
 	
 	private final static String menuFinderNotFondContact =     "\n1.Новый поиск " +
 														"\n2.Exit " ;
-	private final static String menuDeleter = "";
 	private final static String menuChange =    "\n1.Изменить Имя " +
 												"\n2.Изменить Фамилию" +
 												"\n3.Изменить дату рождения" +
@@ -146,7 +145,9 @@ public class UInterfaceCon {
 												"\n6.Изменить номер рабочий" +
 												"\n7.Изменить комментарий" +
 												"\n8.Вернуться назад(-=пропустить контакт=-)";
-	private final static String menuWriterStart = "";
+	private final static String menuWriterStart =   "\n1.Записать в 1 формат " +
+													"\n2.Записать в 2 формат " +
+													"\n3.Выйти";
 	private final static String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
 	private final static String instruction2 = "\nВозвращаюсь назад <= ";
 	private final static String instruction3 = "\nНе существует такого пункта.";
