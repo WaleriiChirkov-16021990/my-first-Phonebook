@@ -63,7 +63,6 @@ public class Reader1 {
 				data.add(new AddNewContact(c[0], c[1], c[2], Integer.parseInt(c[3]), Integer.parseInt(c[4]), c[c.length - 1]));
 			} else if (c.length == 5) {
 				data.add(new AddNewContact(c[0], c[1], c[2], Integer.parseInt(c[3]), c[c.length - 1]));
-				
 			}
 		}
 	}

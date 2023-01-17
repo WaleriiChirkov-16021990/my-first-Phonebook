@@ -29,4 +29,7 @@ public class UInCon {
 		System.out.printf("%s ", s);
 		setInput(scanner.nextLine());
 	}
+	public boolean isInteger() {
+		return this.getInput().matches("^[0-9]+$");
+	}
 }

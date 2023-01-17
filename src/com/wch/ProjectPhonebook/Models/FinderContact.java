@@ -8,56 +8,106 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 import java.util.ArrayList;
 
 public class FinderContact extends Contact{
-	private UInCon u = new UInCon();
 	private Contact finder = new Contact();
-	
-	public FinderContact(){
-		String tempInput;
-		while (true) {
-			new UInterfaceCon().getMenuFinderStart();
-			u.UInput(new UInterfaceCon().getInstruction1());
-			if (u.getInput().equals("1")) {
-				u.UInput(new UInterfaceCon().getEnterFName());
-				finder.getName().setFirstName(u.getInput());
-			} else if (u.getInput().equals("2")) {
-				u.UInput(new UInterfaceCon().getEnterLName());
-				finder.getName().setLastName(u.getInput());
-			} else if (u.getInput().equals("3")) {
-				u.UInput(new UInterfaceCon().getEnterNumber());
-				finder.getNumber().setNumberHome(Integer.parseInt(u.getInput()));
-			} else if (u.getInput().equals("4")) {
-				new Printer(new UInterfaceCon().getInstruction2()).print();
-				break;
-			}
-		}
+	private UInCon u = new UInCon();
+	private ArrayList<Contact> dataBase;
+	private ArrayList<Contact> findContact;
+	public UInCon getU() {
+		return u;
 	}
 	
+	public ArrayList<Contact> getDataBase() {
+		return dataBase;
+	}
+	
+	
+	public Contact getFinder() {
+		return finder;
+	}
+	
+	public FinderContact(ArrayList<Contact> dataBase) {
+		super();
+		this.dataBase = dataBase;
+		this.findContact = new ArrayList<>();
+	}
+	
+	public FinderContact(){
+		super();
+		this.dataBase = new ArrayList<>();
+		this.findContact = new ArrayList<>();
+	}
+	
+	public void setFinder(Contact finder) {
+		this.finder = finder;
+	}
+	
+	public void setU(UInCon u) {
+		this.u = u;
+	}
+	
+	public void setDataBase(ArrayList<Contact> dataBase) {
+		this.dataBase = dataBase;
+	}
+	
+	public ArrayList<Contact> getFindContact() {
+		return findContact;
+	}
+	public void setFindContact(ArrayList<Contact> findContact) {
+		this.findContact = findContact;
+	}
 	public boolean searchContact(ArrayList<Contact> data){
-		return data.contains(this.finder)? true:false;
+		return data.contains(finder)? true:false;
 	}
 	
 	public void showContact(ArrayList<Contact> data, int num) {
 		for (Contact c: data
 		     ) {
-			if (num == 1 || num == 2) {
-				if (c.getName().getFirstName().equals(this.finder.getName().getFirstName())) {
+			if (num == 1) {
+				if (this.finder.getName().getFirstName().equals(c.getName().getFirstName().toLowerCase())) {
+	 				new PrinterContact(c).printCtc();
+					this.findContact.add(c);
+				}
+			} else if (num == 2) {
+				if (this.finder.getName().getLastName().equals(c.getName().getLastName().toLowerCase())) {
 					new PrinterContact(c).printCtc();
-				} else if (c.getName().getLastName().equals(this.finder.getName().getLastName())) {
-					new PrinterContact(c).printCtc();
+					this.findContact.add(c);
 				}
 			} else if (num == 3) {
-				if (c.getNumber().getNumberHome() == this.finder.getNumber().getNumberHome()) {
+				if (    c.getNumber().getNumberHome() == this.finder.getNumber().getNumberHome() ||
+						c.getNumber().getNumberMobile() == this.finder.getNumber().getNumberHome() ||
+						c.getNumber().getNumberWork() == this.finder.getNumber().getNumberHome()) {
 					new PrinterContact(c).printCtc();
-				} else if (c.getNumber().getNumberMobile() == this.finder.getNumber().getNumberMobile()) {
-					new PrinterContact(c).printCtc();
-				} else if (c.getNumber().getNumberWork() == this.finder.getNumber().getNumberWork()) {
-					new PrinterContact(c).printCtc();
+					this.findContact.add(c);
 				}
 			}
 		}
+		if (this.findContact.size() == 0) {
+			new Printer(new UInterfaceCon().getContactNotFound()).print();
+		}
 	}
-	
-	
-	
-	
+	public void addFindContact() {
+		String tempInput;
+		while (true) {
+			new Printer(new UInterfaceCon().getMenuFinderStart()).print();
+			u.UInput(new UInterfaceCon().getInstruction1());
+			if (u.getInput().equals("1")) {
+				u.UInput(new UInterfaceCon().getEnterFName());
+				finder.getName().setFirstName(u.getInput().toLowerCase());
+				this.showContact(dataBase,1);
+			} else if (u.getInput().equals("2")) {
+				u.UInput(new UInterfaceCon().getEnterLName());
+				finder.getName().setLastName(u.getInput().toLowerCase());
+				showContact(dataBase,2);
+			} else if (u.getInput().equals("3")) {
+				u.UInput(new UInterfaceCon().getEnterNumber());
+				finder.getNumber().setNumberHome(Integer.parseInt(u.getInput().toLowerCase()));
+				showContact(dataBase,3);
+			} else if (u.getInput().equals("4")) {
+				new Printer(new UInterfaceCon().getInstruction2()).print();
+				break;
+			} else {
+				new Printer(new UInterfaceCon().getInstruction3()).print();
+			}
+		}
+	}
 }

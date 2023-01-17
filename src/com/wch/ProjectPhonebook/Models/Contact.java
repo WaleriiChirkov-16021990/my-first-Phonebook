@@ -4,8 +4,6 @@ import com.wch.ProjectPhonebook.Abstract.Class.Human;
 import com.wch.ProjectPhonebook.Abstract.Interface.AbleToCall;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 
-import java.util.Date;
-
 public class Contact extends Human implements AbleToCall<Number> {
 	private Number number = new Number();
 	private Commentary commentary =  new Commentary();

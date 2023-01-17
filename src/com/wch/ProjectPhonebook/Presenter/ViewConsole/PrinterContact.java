@@ -5,12 +5,12 @@ import com.wch.ProjectPhonebook.Models.Contact;
 public class PrinterContact extends Contact {
 	private Contact contact;
 	
-	public PrinterContact(Contact contact) {
+	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
 	
-	public Contact getContact() {
-		return contact;
+	public PrinterContact(Contact contact) {
+		this.contact = contact;
 	}
 	
 	public void printCtc() {

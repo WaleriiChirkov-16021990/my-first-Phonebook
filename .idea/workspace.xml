@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно.">
+    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="обновил типовые контсрукторы, для разного количества номеров у контакта.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Валерий Чирков/IdeaProjects/Phonebook/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Валерий Чирков/IdeaProjects/Phonebook/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Валерий Чирков\IdeaProjects\Phonebook\src\com\wch\ProjectPhonebook\Data\ReaderData\ReaderTXT" />
@@ -87,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673798279097</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="обновил типовые контсрукторы, для разного количества номеров у контакта.">
+      <created>1673802235437</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673802235437</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,7 +116,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="определена структура, начато описание классов." />
     <MESSAGE value="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно." />
-    <option name="LAST_COMMIT_MESSAGE" value="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно." />
+    <MESSAGE value="обавил типовые контсрукторы, для разного количества номеров у контакта." />
+    <MESSAGE value="обновил типовые контсрукторы, для разного количества номеров у контакта." />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил типовые контсрукторы, для разного количества номеров у контакта." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

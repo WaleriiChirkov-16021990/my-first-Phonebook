@@ -73,12 +73,16 @@ public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
 	}
 	
 	public Phonebook(DataBase dataBase) throws FileNotFoundException {
+		this();
 		this.dataBase = new DataBase(dataBase);
 	}
 	
 	public Phonebook() throws FileNotFoundException{
+		reader1 = new Reader1();
+		reader2 = new Reader2();
 	
 	}
+	
 	
 	/**
 	 * Compares its two arguments for order.  Returns a negative integer,

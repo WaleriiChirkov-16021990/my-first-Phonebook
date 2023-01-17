@@ -15,9 +15,9 @@ public abstract class Human {
 		return name;
 	}
 	
-	public void setName(Name name) {
-		this.name = name;
-	}
+//	public void setName(Name name) {
+//		this.name = name;
+//	}
 	
 	
 	
