@@ -1,10 +1,7 @@
 package com.wch.ProjectPhonebook.Application;
 
-import com.wch.ProjectPhonebook.Data.DataBase.DataBase;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
-import com.wch.ProjectPhonebook.Models.DeleterContact;
-import com.wch.ProjectPhonebook.Models.FinderContact;
-import com.wch.ProjectPhonebook.Models.Phonebook;
+import com.wch.ProjectPhonebook.Models.*;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.PrinterPhonebook;
 import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
@@ -52,20 +49,16 @@ public class Application {
 				deleterContact.addFindContact();
 				phonebook.getDataBase().setDataBase(deleterContact.deleteContact(deleterContact.getFindContact(),deleterContact.getDataBase()));
 			} else if (uInCon.getInput().equals("5")) {   // добавить контакт
-				while (true) {
-					new Printer(new UInterfaceCon().getMenuReaderStart()).print();
-					uInCon.UInput(new UInterfaceCon().getInstruction1());
-				}
+				AddNewContact newContact = new AddNewContact();
+				newContact.enterNewContact();
+				newContact = new AddNewContact(newContact.getName().getFirstName(),newContact.getName().getLastName(),newContact.getDateOfBirth(), newContact.getNumber().getNumberHome(), newContact.getCommentary().getComment());
+				newContact.add(phonebook.getDataBase().getDataBase());
 			} else if (uInCon.getInput().equals("6")) {   // изменить контакт
-				while (true) {
-					new Printer(new UInterfaceCon().getMenuReaderStart()).print();
-					uInCon.UInput(new UInterfaceCon().getInstruction1());
-				}
+				ChangeContact changeContact = new ChangeContact(phonebook.getDataBase().getDataBase());
+				changeContact.addFindContact();
+				changeContact.changeContact();
 			} else if (uInCon.getInput().equals("7")) {   // записать книгу в файл
-				while (true) {
-					new Printer(new UInterfaceCon().getMenuReaderStart()).print();
-					uInCon.UInput(new UInterfaceCon().getInstruction1());
-				}
+			
 			} else if (uInCon.getInput().equals("8")) {   //  выход
 				new Printer(UInterfaceCon.getCloseApplication()).print();
 				break;

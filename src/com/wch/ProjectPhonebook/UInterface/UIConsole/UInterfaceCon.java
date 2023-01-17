@@ -27,12 +27,78 @@ public class UInterfaceCon {
 	
 	private final static String enterFName = "\n1.Введите имя : ";
 	private final static String enterLName = "\n1.Введите фамилию : ";
+	private final  static String enterDateBtsd = "\n1.Введите дату рождения : ";
 	private final static String enterNumber = "\n1.Введите телефон : ";
+	private final static String enterNumberwork = "\n1.Введите рабочий телефон : ";
+	private final static String enterNumberMob = "\n1.Введите мобильный телефон : ";
+	private final static String enterComment = "\n1.Введите комментарий : ";
 	private final static String closeApplication = "\nПрограмма завершена.";
-	private final String contactNotFound = "\nКонтакт не найден!";
+	private final static String contactNotFound = "\nКонтакт не найден!";
+	private final static String currentField = "\nТекущее значение: ";
+	private final static String changeField = "\nВведите новое значение: ";
+	
+	private final static String inputNewFName = "\n1.Введите новое Имя: ";
+	private final static String inputNewLName = "\n1.Введите новую фамилию: ";
+	private final static String inputNewDBirthDay = "\n1.Введите новую дату рождения: ";
+	private final static String inputNewHomeNumber = "\n1.Введите новый домашний номер: ";
+	private final static String inputNewMobileNumber = "\n1.Введите новый мобильный номер: ";
+	private final static String inputNewWorkNumber = "\n1.Введите новый рабочий номер: ";
+	private final static String inputNewComment = "\n1.Введите новый комментарий: ";
+	
+	public String getInputNewFName() {
+		return inputNewFName;
+	}
+	
+	public String getInputNewLName() {
+		return inputNewLName;
+	}
+	
+	public String getInputNewDBirthDay() {
+		return inputNewDBirthDay;
+	}
+	
+	public String getInputNewHomeNumber() {
+		return inputNewHomeNumber;
+	}
+	
+	public String getInputNewMobileNumber() {
+		return inputNewMobileNumber;
+	}
+	
+	public String getInputNewWorkNumber() {
+		return inputNewWorkNumber;
+	}
+	
+	public String getInputNewComment() {
+		return inputNewComment;
+	}
+	
+	public String getCurrentField() {
+		return currentField;
+	}
+	
+	public String getChangeField() {
+		return changeField;
+	}
 	
 	public String getContactNotFound() {
 		return contactNotFound;
+	}
+	
+	public String getEnterDateBtsd() {
+		return enterDateBtsd;
+	}
+	
+	public String getEnterNumberwork() {
+		return enterNumberwork;
+	}
+	
+	public String getEnterNumberMob() {
+		return enterNumberMob;
+	}
+	
+	public String getMenuFinderNotFondContact() {
+		return menuFinderNotFondContact;
 	}
 	
 	public static String getCloseApplication() {
@@ -52,11 +118,34 @@ public class UInterfaceCon {
 	}
 	
 	
+	private final static String matchesFound = "\nЕсть совпадения: ";
 	
-	private final static String menuFinderNotFindContact =     "\n1.Новый поиск " +
+	private final String isNotNumber = "\nВы ввели не целое число.";
+	private final String isNotDate = "\nВы ввели не дату. \n'хх.хх.хххх' ";
+	
+	public String getIsNotDate() {
+		return isNotDate;
+	}
+	
+	public String getIsNotNumber() {
+		return isNotNumber;
+	}
+	
+	public String getMatchesFound() {
+		return matchesFound;
+	}
+	
+	private final static String menuFinderNotFondContact =     "\n1.Новый поиск " +
 														"\n2.Exit " ;
 	private final static String menuDeleter = "";
-	private final static String menuChange = "";
+	private final static String menuChange =    "\n1.Изменить Имя " +
+												"\n2.Изменить Фамилию" +
+												"\n3.Изменить дату рождения" +
+												"\n4.Изменить номер домашний" +
+												"\n5.Изменить номер мобильный" +
+												"\n6.Изменить номер рабочий" +
+												"\n7.Изменить комментарий" +
+												"\n8.Вернуться назад(-=пропустить контакт=-)";
 	private final static String menuWriterStart = "";
 	private final static String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
 	private final static String instruction2 = "\nВозвращаюсь назад <= ";
@@ -80,6 +169,10 @@ public class UInterfaceCon {
 	
 	public String getGreeting() {
 		return greeting;
+	}
+	
+	public String getEnterComment() {
+		return enterComment;
 	}
 	
 	public String getMenuStart() {

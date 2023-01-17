@@ -32,4 +32,8 @@ public class UInCon {
 	public boolean isInteger() {
 		return this.getInput().matches("^[0-9]+$");
 	}
+	
+	public boolean isDate() {
+		return this.getInput().matches("^\\d{1,2}\\.\\d{2}\\.\\d{4}");
+	}
 }

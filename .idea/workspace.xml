@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="обновил типовые контсрукторы, для разного количества номеров у контакта.">
+    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="Обработал сущность добавления нового и изменение&#10;существующего контактов.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/ChangeContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/ChangeContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" afterDir="false" />
     </list>
@@ -99,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673802235437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="обработал сущности поиска и удаления контакта">
+      <created>1673938381732</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673938381732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,7 +120,8 @@
     <MESSAGE value="описан вывод текущей базы, выход из приложения, загрузка &#10;базы из файла .txt построчно." />
     <MESSAGE value="обавил типовые контсрукторы, для разного количества номеров у контакта." />
     <MESSAGE value="обновил типовые контсрукторы, для разного количества номеров у контакта." />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил типовые контсрукторы, для разного количества номеров у контакта." />
+    <MESSAGE value="обработал сущности поиска и удаления контакта" />
+    <option name="LAST_COMMIT_MESSAGE" value="обработал сущности поиска и удаления контакта" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

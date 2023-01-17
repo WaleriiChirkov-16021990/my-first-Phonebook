@@ -55,9 +55,6 @@ public class FinderContact extends Contact{
 	public void setFindContact(ArrayList<Contact> findContact) {
 		this.findContact = findContact;
 	}
-	public boolean searchContact(ArrayList<Contact> data){
-		return data.contains(finder)? true:false;
-	}
 	
 	public void showContact(ArrayList<Contact> data, int num) {
 		for (Contact c: data
@@ -94,14 +91,21 @@ public class FinderContact extends Contact{
 				u.UInput(new UInterfaceCon().getEnterFName());
 				finder.getName().setFirstName(u.getInput().toLowerCase());
 				this.showContact(dataBase,1);
+				break;
 			} else if (u.getInput().equals("2")) {
 				u.UInput(new UInterfaceCon().getEnterLName());
 				finder.getName().setLastName(u.getInput().toLowerCase());
 				showContact(dataBase,2);
+				break;
 			} else if (u.getInput().equals("3")) {
 				u.UInput(new UInterfaceCon().getEnterNumber());
-				finder.getNumber().setNumberHome(Integer.parseInt(u.getInput().toLowerCase()));
-				showContact(dataBase,3);
+				if (u.isInteger()) {
+					finder.getNumber().setNumberHome(Integer.parseInt(u.getInput().toLowerCase()));
+					showContact(dataBase,3);
+					break;
+				} else {
+					new Printer(new UInterfaceCon().getIsNotNumber()).print();
+				}
 			} else if (u.getInput().equals("4")) {
 				new Printer(new UInterfaceCon().getInstruction2()).print();
 				break;
