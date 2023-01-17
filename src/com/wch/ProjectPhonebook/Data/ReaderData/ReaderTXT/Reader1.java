@@ -11,19 +11,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Reader1 {
-	private final BufferedReader reader = new BufferedReader(new FileReader("src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt"));
+	private  BufferedReader reader;
 
 	private DataBase dataBase;
 	private String line;
-	private ArrayList<String[]> base = new ArrayList<>();
-	private ArrayList<Contact> data = new ArrayList<>();
+	private ArrayList<String[]> base;
+	private ArrayList<Contact> data;
+	
+	private final String file = "src/com/wch/ProjectPhonebook/Data/DataFile/DataRow.txt";
 	
 	public ArrayList<Contact> getData() {
 		return data;
 	}
 	
 	public Reader1() throws FileNotFoundException {
-	
+		base = new ArrayList<>();
+		data = new ArrayList<>();
+		this.reader = new BufferedReader(new FileReader(file));
 	}
 	
 	public void readFile() throws IOException {
@@ -36,6 +40,10 @@ public class Reader1 {
 		} finally {
 			reader.close();
 		}
+	}
+	
+	public void setReader(BufferedReader reader) {
+		this.reader = reader;
 	}
 	
 	public DataBase getDataBase() {
@@ -52,6 +60,23 @@ public class Reader1 {
 	
 	public String getLine () {
 		return line;
+	}
+	
+	
+	public void setLine(String line) {
+		this.line = line;
+	}
+	
+	public ArrayList<String[]> getBase() {
+		return base;
+	}
+	
+	public void setBase(ArrayList<String[]> base) {
+		this.base = base;
+	}
+	
+	public void setData(ArrayList<Contact> data) {
+		this.data = data;
 	}
 	
 	public void ghostData() {

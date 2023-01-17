@@ -1,6 +1,7 @@
 package com.wch.ProjectPhonebook.Application;
 
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
+import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
 import com.wch.ProjectPhonebook.Models.*;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.PrinterPhonebook;
@@ -26,12 +27,18 @@ public class Application {
 					uInCon.UInput(new UInterfaceCon().getInstruction1());
 					if (uInCon.getInput().equals("1")) {
 						reader1 = new Reader1();
-						 reader1.readFile();
-						 reader1.ghostData();
-						 phonebook = new Phonebook(reader1.getData());
-						 new Printer(new UInterfaceCon().getPhonebookUpdate()).print();
+						reader1.readFile();
+						reader1.ghostData();
+						phonebook = new Phonebook(reader1.getData());
+						new Printer(new UInterfaceCon().getPhonebookUpdate()).print();
+						break;
 					} else if (uInCon.getInput().equals("2")) {
-					
+						Reader2 reader2 = new Reader2();
+						reader2.readFile();
+						reader2.ghostData();
+						phonebook = new Phonebook(reader2.getData());
+						new Printer(new UInterfaceCon().getPhonebookUpdate()).print();
+						break;
 					} else if (uInCon.getInput().equals("3")) {
 						new Printer(new UInterfaceCon().getInstruction2()).print();
 						break;
@@ -65,7 +72,6 @@ public class Application {
 			} else {                                      //  ошибка
 				new Printer(new UInterfaceCon().getInstruction3()).print();
 			}
-
 		}
 	}
 }
