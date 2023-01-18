@@ -7,6 +7,9 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.IOException;
 
+/**
+ * Сущность, которая предоставляет пользователю выбор формата записи БД в файл,  обновляет текущую базу в файле.
+ */
 public class WriterMain {
 	private DataBase dataBase;
 	private Writer1 writer1;
@@ -21,6 +24,10 @@ public class WriterMain {
 		uInCon = new UInCon();
 	}
 	
+	/**
+	 * метод предлагает на выбор запись базы в файл в 2-х форматах.
+	 * @throws IOException - ошибки связанные с файлами, или их отсутствием.
+	 */
 	public void selectWriter() throws IOException {
 		while (true) {
 			new Printer(new UInterfaceCon().getMenuWriterStart()).print();

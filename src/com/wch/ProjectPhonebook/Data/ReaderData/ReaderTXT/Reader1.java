@@ -72,28 +72,9 @@ public class Reader1 {
 	public BufferedReader getReader() {
 		return reader;
 	}
-	
-	public String getLine () {
-		return line;
-	}
-	
-	
-	public void setLine(String line) {
-		this.line = line;
-	}
-	
 	public ArrayList<String[]> getBase() {
 		return base;
 	}
-	
-	public void setBase(ArrayList<String[]> base) {
-		this.base = base;
-	}
-	
-	public void setData(ArrayList<Contact> data) {
-		this.data = data;
-	}
-	
 	/**
 	 * Метод формирует базу на основе полученных из файла строк.
 	 * В зависимости от количества прописанных номеров, вызываются разные конструкторы новых контактов.

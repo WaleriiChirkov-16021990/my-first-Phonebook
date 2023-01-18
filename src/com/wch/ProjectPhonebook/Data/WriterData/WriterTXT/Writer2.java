@@ -8,6 +8,9 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * класс описывает сущность, способную открыть файл .txt и записать файлы базы данных в него, по определенной форме записи информации.
+ */
 public class Writer2 extends Writer1{
 	private final String file2 = "src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt";
 	
@@ -26,7 +29,11 @@ public class Writer2 extends Writer1{
 		super.setFileWriter(new FileWriter(file2));
 	}
 	
-	
+	/**
+	 * Данный метод формирует необходимую строку для каждого контакта из базы и прописывает его в указанный файл.
+	 * Циклично строка обнуляется и так проходим всю БД ArrayList<Contact>/
+	 *
+	 */
 	@Override
 	public void recordMyPhonebook() throws IOException {
 	String temp = "";
