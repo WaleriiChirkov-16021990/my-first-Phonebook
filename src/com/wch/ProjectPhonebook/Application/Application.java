@@ -2,6 +2,7 @@ package com.wch.ProjectPhonebook.Application;
 
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
+import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.ReaderMain;
 import com.wch.ProjectPhonebook.Data.WriterData.WriterTXT.WriterMain;
 import com.wch.ProjectPhonebook.Models.*;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
@@ -11,7 +12,14 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.IOException;
 
+/**
+ * Приложение
+ */
 public class Application {
+	/**
+	 * Метод запуска
+	 * @throws IOException - возможны ошибки работы с файлами.
+	 */
 	public static void runApp() throws IOException {
 		Reader1 reader1 = new Reader1();
 		reader1.readFile();
@@ -22,31 +30,9 @@ public class Application {
 		while (true) {
 			new Printer(new UInterfaceCon().getMenuStart()).print();
 			uInCon.UInput(new UInterfaceCon().getInstruction1());
-			if (uInCon.getInput().equals("1")) {     //загрузка данных из файла
-				while (true) {
-					new Printer(new UInterfaceCon().getMenuReaderStart()).print();
-					uInCon.UInput(new UInterfaceCon().getInstruction1());
-					if (uInCon.getInput().equals("1")) {
-						reader1 = new Reader1();
-						reader1.readFile();
-						reader1.ghostData();
-						phonebook = new Phonebook(reader1.getData());
-						new Printer(new UInterfaceCon().getPhonebookUpdate()).print();
-						break;
-					} else if (uInCon.getInput().equals("2")) {
-						Reader2 reader2 = new Reader2();
-						reader2.readFile();
-						reader2.ghostData();
-						phonebook = new Phonebook(reader2.getData());
-						new Printer(new UInterfaceCon().getPhonebookUpdate()).print();
-						break;
-					} else if (uInCon.getInput().equals("3")) {
-						new Printer(new UInterfaceCon().getInstruction2()).print();
-						break;
-					} else {
-						new Printer(new UInterfaceCon().getInstruction3()).print();
-					}
-				}
+			if (uInCon.getInput().equals("1")) {     //загрузка данных из файлов
+				ReaderMain readerMain = new ReaderMain(phonebook.getDataBase());
+				readerMain.downloadPhonebook();
 			} else if (uInCon.getInput().equals("2")) {       //просмотр книги
 				new PrinterPhonebook().printPB(phonebook.getDataBase());
 			} else if (uInCon.getInput().equals("3")) {       // поиск контакта
@@ -67,6 +53,7 @@ public class Application {
 				changeContact.changeContact();
 			} else if (uInCon.getInput().equals("7")) {   // записать книгу в файл
 				WriterMain writerMain = new WriterMain(phonebook.getDataBase());
+				writerMain.selectWriter();
 			} else if (uInCon.getInput().equals("8")) {   //  выход
 				new Printer(UInterfaceCon.getCloseApplication()).print();
 				break;

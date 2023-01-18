@@ -3,6 +3,7 @@ package com.wch.ProjectPhonebook.Data.WriterData.WriterTXT;
 import com.wch.ProjectPhonebook.Data.DataBase.DataBase;
 import com.wch.ProjectPhonebook.Models.Contact;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
+import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,16 +16,13 @@ public class Writer1 {
 	
 	public Writer1(DataBase dataBase) throws IOException {
 		this.dataBase = dataBase;
-//		fileWriter = new FileWriter(file);
 	}
 	
 	public Writer1(FileWriter fileWriter) throws IOException {
 		this.fileWriter = fileWriter;
-//		fileWriter = new FileWriter(file);
 	}
 	
 	public Writer1() throws IOException {
-//		fileWriter = new FileWriter(file);
 	
 	}
 	
@@ -66,6 +64,7 @@ public class Writer1 {
 				fileWriter.write("\n");
 				fileWriter.flush();
 			}
+			new Printer(new UInterfaceCon().getFileWrite()).print();
 		} catch (IOException e){
 			new Printer(e.getMessage()).print();
 		} finally {

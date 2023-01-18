@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="осталось доработать запись телефонного справочника &#10;в 2 типа файлов.&#10;оба парсера рабочие.">
-      <change afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/WriterMain.java" afterDir="false" />
+    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="начаты блоки записи в файл">
+      <change afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/ReaderMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Class/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Interface/AbleToCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Abstract/Interface/AbleToCall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/DataRow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/DataFile/DataRow.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/WriterMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/WriterMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673985972268</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="начаты блоки записи в файл">
+      <created>1673989351328</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673989351328</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,7 +151,8 @@
     <MESSAGE value="обработал сущности поиска и удаления контакта" />
     <MESSAGE value="осталось доработать 2-й парсер файла .txt &#10; и запись телефонного справочника в 2 типа файлов." />
     <MESSAGE value="осталось доработать запись телефонного справочника &#10;в 2 типа файлов.&#10;оба парсера рабочие." />
-    <option name="LAST_COMMIT_MESSAGE" value="осталось доработать запись телефонного справочника &#10;в 2 типа файлов.&#10;оба парсера рабочие." />
+    <MESSAGE value="начаты блоки записи в файл" />
+    <option name="LAST_COMMIT_MESSAGE" value="начаты блоки записи в файл" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

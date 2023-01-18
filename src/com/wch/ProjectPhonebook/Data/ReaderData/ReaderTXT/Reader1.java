@@ -10,6 +10,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Парсер БД файла фотмата .txt для приведения данных к удобному виду для манипуляций.
+ * Данные считываются построчно и в конечном итоге приобретают вид ArrayList<Contact>.
+ */
 public class Reader1 {
 	private  BufferedReader reader;
 
@@ -30,6 +34,17 @@ public class Reader1 {
 		this.reader = new BufferedReader(new FileReader(file));
 	}
 	
+	/**
+	 * Метод читает .txt файл, данные в котором записаны в формате 1 строка = 1 контакт, и имеют запись вида
+	 * "FirstName,LastName,dd.mm.yyyy,Number1,Number2,Number3,Comment\n"
+	 * FirstName - type String
+	 * LastName - type String
+	 * dd.mm.yyyy - type String
+	 * Number 1 /2 /3 - type int
+	 * Comment - type String
+	 * Info:   dd.mm.yyyy - date Birth.
+	 * @throws IOException - ошибка при отсутствие файла или неверном формате записи БД в файле.
+	 */
 	public void readFile() throws IOException {
 		try{
 			while((line = reader.readLine()) != null){
@@ -79,6 +94,10 @@ public class Reader1 {
 		this.data = data;
 	}
 	
+	/**
+	 * Метод формирует базу на основе полученных из файла строк.
+	 * В зависимости от количества прописанных номеров, вызываются разные конструкторы новых контактов.
+	 */
 	public void ghostData() {
 		for (String[] c: this.base
 		     ) {

@@ -5,6 +5,9 @@ import com.wch.ProjectPhonebook.Models.Contact;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * База данных. для хранения контактов с возможностями ArrayList
+ */
 public class DataBase extends ArrayList<Contact> {
 	private ArrayList<Contact> dataBase = new ArrayList<Contact>();
 	

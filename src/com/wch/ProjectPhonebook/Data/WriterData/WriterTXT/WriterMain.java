@@ -18,6 +18,7 @@ public class WriterMain {
 	
 	public WriterMain(DataBase dataBase) {
 		this.dataBase = dataBase;
+		uInCon = new UInCon();
 	}
 	
 	public void selectWriter() throws IOException {

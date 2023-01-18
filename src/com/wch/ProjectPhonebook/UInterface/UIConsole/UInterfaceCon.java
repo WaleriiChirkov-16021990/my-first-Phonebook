@@ -151,6 +151,10 @@ public class UInterfaceCon {
 	private final static String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
 	private final static String instruction2 = "\nВозвращаюсь назад <= ";
 	private final static String instruction3 = "\nНе существует такого пункта.";
+	private final static String fileWrite = "\nФайл записан";
+	public String getFileWrite() {
+		return fileWrite;
+	}
 	
 	public String getInstruction3() {
 		return instruction3;
