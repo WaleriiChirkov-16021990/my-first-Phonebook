@@ -10,6 +10,11 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.function.Consumer;
 
+/**
+ * Сущность телефонная книга, хранит в себе экземпляры БД, добавления нового контатка, поиска контакта по критерию,
+ * по 2 разных экземпляра чтения БД из файла, экземпляр удаления контакта и экземпляр изменения контакта.
+ * Сущность хранит, передает и меняет значения имеющихся контактов.
+ */
 public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
 	
 	private DataBase dataBase;
@@ -69,6 +74,7 @@ public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
 	}
 	
 	public Phonebook(ArrayList<Contact> data) throws FileNotFoundException {
+		this();
 		this.dataBase = new DataBase(data);
 	}
 	

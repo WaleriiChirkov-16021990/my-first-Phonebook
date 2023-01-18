@@ -6,6 +6,10 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.util.ArrayList;
 
+/**
+ * Класс описывает сущность, способную создать новую объектную переменную type <Contact>
+ * и добавить ее в переданную базу данных type ArrayList<Contact>/
+ */
 public class AddNewContact extends Contact {
 	private UInCon uInCon;
 	
@@ -22,6 +26,16 @@ public class AddNewContact extends Contact {
 		this.uInCon = new UInCon();
 	}
 	
+	/**
+	 * Конструктор ( самый расширенной версии объектной переменной)
+	 * @param firstName  имя
+	 * @param lastName  фамилия
+	 * @param date  дата рождения
+	 * @param number1 номер домашнего телефона
+	 * @param number2  номер мобильного
+	 * @param number3  рабочий номер телефона
+	 * @param commentary  комментарий
+	 */
 	public AddNewContact(String firstName, String lastName, String date, int number1, int number2, int number3, String commentary) {
 		super(firstName, lastName, date, number1, number2, number3, commentary);
 		this.uInCon = new UInCon();
@@ -40,13 +54,16 @@ public class AddNewContact extends Contact {
 		data.add(this);
 	}
 	
+	/**
+	 *  Метод заполнения полей объектной перемнной нового контакта
+	 */
 	public void enterNewContact() {
 		uInCon.UInput(new UInterfaceCon().getEnterFName());
 		super.getName().setFirstName(uInCon.getInput());
 		uInCon.UInput(new UInterfaceCon().getEnterLName());
 		super.getName().setLastName(uInCon.getInput());
 		while (true) {
-		uInCon.UInput(new UInterfaceCon().getEnterDateBtsd());
+			uInCon.UInput(new UInterfaceCon().getEnterDateBtsd());
 			if (uInCon.isDate()) {
 				super.setDateOfBirth(uInCon.getInput());
 				break;

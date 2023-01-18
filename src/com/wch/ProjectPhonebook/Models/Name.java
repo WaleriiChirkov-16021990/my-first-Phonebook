@@ -1,5 +1,8 @@
 package com.wch.ProjectPhonebook.Models;
 
+/**
+ * Сущность описывает имена контактов
+ */
 public class Name {
 	private String firstName;
 	private String lastName;

@@ -1,7 +1,6 @@
 package com.wch.ProjectPhonebook.Application;
 
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
-import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.ReaderMain;
 import com.wch.ProjectPhonebook.Data.WriterData.WriterTXT.WriterMain;
 import com.wch.ProjectPhonebook.Models.*;
@@ -41,7 +40,7 @@ public class Application {
 			} else if (uInCon.getInput().equals("4")) {   // удалить контакт
 				DeleterContact deleterContact = new DeleterContact(phonebook.getDataBase().getDataBase());
 				deleterContact.addFindContact();
-				phonebook.getDataBase().setDataBase(deleterContact.deleteContact(deleterContact.getFindContact(),deleterContact.getDataBase()));
+				deleterContact.deleteContact(deleterContact.getFindContact());
 			} else if (uInCon.getInput().equals("5")) {   // добавить контакт
 				AddNewContact newContact = new AddNewContact();
 				newContact.enterNewContact();
@@ -57,7 +56,7 @@ public class Application {
 			} else if (uInCon.getInput().equals("8")) {   //  выход
 				new Printer(UInterfaceCon.getCloseApplication()).print();
 				break;
-			} else {                                      //  ошибка
+			} else {                                      //  ошибка ввода юзера
 				new Printer(new UInterfaceCon().getInstruction3()).print();
 			}
 		}

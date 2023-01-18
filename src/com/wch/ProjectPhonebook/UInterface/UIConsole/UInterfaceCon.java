@@ -1,5 +1,9 @@
 package com.wch.ProjectPhonebook.UInterface.UIConsole;
 
+/**
+ * Экземпляр для хранения текстовых постоянных(констант), которые используются для навигации пользователя через консоль
+ * или любое другое средство отображения и ввода информации.
+ */
 public class UInterfaceCon {
 	private final static String greeting = "Добро пожаловать в телефонный справочник.";
 	private final static String menuStart =    "\n1.Загрузить новую книгу из файла  " +
@@ -41,9 +45,32 @@ public class UInterfaceCon {
 	private final static String inputNewLName = "\n1.Введите новую фамилию: ";
 	private final static String inputNewDBirthDay = "\n1.Введите новую дату рождения: ";
 	private final static String inputNewHomeNumber = "\n1.Введите новый домашний номер: ";
+	private final static String menuFinderNotFondContact =     "\n1.Новый поиск " +
+			"\n2.Exit " ;
+	private final static String menuChange =    "\n1.Изменить Имя " +
+			"\n2.Изменить Фамилию" +
+			"\n3.Изменить дату рождения" +
+			"\n4.Изменить номер домашний" +
+			"\n5.Изменить номер мобильный" +
+			"\n6.Изменить номер рабочий" +
+			"\n7.Изменить комментарий" +
+			"\n8.Вернуться назад(-=пропустить контакт=-)";
+	private final static String menuWriterStart =   "\n1.Записать в 1 формат " +
+			"\n2.Записать в 2 формат " +
+			"\n3.Выйти";
+	private final static String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
+	private final static String instruction2 = "\nВозвращаюсь назад <= ";
+	private final static String instruction3 = "\nНе существует такого пункта.";
+	private final static String fileWrite = "\nФайл записан";
 	private final static String inputNewMobileNumber = "\n1.Введите новый мобильный номер: ";
+	private final static String matchesFound = "\nЕсть совпадения: ";
+	
+	private final  static String isNotNumber = "\nВы ввели не целое число.";
+	private final static String isNotDate = "\nВы ввели не дату. \n'хх.хх.хххх' ";
 	private final static String inputNewWorkNumber = "\n1.Введите новый рабочий номер: ";
 	private final static String inputNewComment = "\n1.Введите новый комментарий: ";
+	
+	
 	
 	public String getInputNewFName() {
 		return inputNewFName;
@@ -118,11 +145,6 @@ public class UInterfaceCon {
 	}
 	
 	
-	private final static String matchesFound = "\nЕсть совпадения: ";
-	
-	private final String isNotNumber = "\nВы ввели не целое число.";
-	private final String isNotDate = "\nВы ввели не дату. \n'хх.хх.хххх' ";
-	
 	public String getIsNotDate() {
 		return isNotDate;
 	}
@@ -134,24 +156,6 @@ public class UInterfaceCon {
 	public String getMatchesFound() {
 		return matchesFound;
 	}
-	
-	private final static String menuFinderNotFondContact =     "\n1.Новый поиск " +
-														"\n2.Exit " ;
-	private final static String menuChange =    "\n1.Изменить Имя " +
-												"\n2.Изменить Фамилию" +
-												"\n3.Изменить дату рождения" +
-												"\n4.Изменить номер домашний" +
-												"\n5.Изменить номер мобильный" +
-												"\n6.Изменить номер рабочий" +
-												"\n7.Изменить комментарий" +
-												"\n8.Вернуться назад(-=пропустить контакт=-)";
-	private final static String menuWriterStart =   "\n1.Записать в 1 формат " +
-													"\n2.Записать в 2 формат " +
-													"\n3.Выйти";
-	private final static String instruction1 = "Для работы со мной, выберите нужный пункт в меню: ";
-	private final static String instruction2 = "\nВозвращаюсь назад <= ";
-	private final static String instruction3 = "\nНе существует такого пункта.";
-	private final static String fileWrite = "\nФайл записан";
 	public String getFileWrite() {
 		return fileWrite;
 	}

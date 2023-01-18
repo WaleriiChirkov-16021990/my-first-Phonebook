@@ -7,6 +7,10 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.util.ArrayList;
 
+/**
+ * Сущность ищет контакт из переданной БД по введенным пользователем критериям.
+ * В случае успеха выводит найденные контакты в консоль пользователю.
+ */
 public class FinderContact extends Contact{
 	private Contact finder = new Contact();
 	private UInCon u = new UInCon();
@@ -56,6 +60,11 @@ public class FinderContact extends Contact{
 		this.findContact = findContact;
 	}
 	
+	/**
+	 * Метод отображения контакта ( или контактов) в консоль
+	 * @param data Список всех  контактов
+	 * @param num - передаваемый флаг для режима поиска( сравнения)
+	 */
 	public void showContact(ArrayList<Contact> data, int num) {
 		for (Contact c: data
 		     ) {
@@ -78,12 +87,16 @@ public class FinderContact extends Contact{
 				}
 			}
 		}
-		if (this.findContact.size() == 0) {
+		if (this.findContact.size() == 0) { // если нет совпадений посика , пишет об этом пользователю в консоль
 			new Printer(new UInterfaceCon().getContactNotFound()).print();
 		}
 	}
+	
+	/**
+	 * Метод ввода критериев поиска которые прописываются в контакт шаблон finder для дальнейшего сравнения в базе,
+	 * вызывается метод поиска контакта по базе .
+	 */
 	public void addFindContact() {
-		String tempInput;
 		while (true) {
 			new Printer(new UInterfaceCon().getMenuFinderStart()).print();
 			u.UInput(new UInterfaceCon().getInstruction1());

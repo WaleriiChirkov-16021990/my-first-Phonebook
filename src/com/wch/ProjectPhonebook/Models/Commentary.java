@@ -12,6 +12,10 @@ public class Commentary {
 		this.date = new Date();
 	}
 	
+	/**
+	 * Экземпляр для хранения комментария для контакта.
+	 * Может хранить любое строковое значение.
+	 */
 	public Commentary() {
 	}
 	
@@ -26,9 +30,5 @@ public class Commentary {
 	
 	public Date getDate() {
 		return date;
-	}
-	
-	public void clearComment(){
-		setComment("");
 	}
 }

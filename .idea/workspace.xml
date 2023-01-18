@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="все блоки работают, написал сущность выбора формата считываемого файла.">
+    <list default="true" id="f6a1863f-7ed6-4a6f-b664-9f4b302850b1" name="Changes" comment="продолжаю заполнение javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/ReaderData/ReaderTXT/Reader1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/Writer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/WriterMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Data/WriterData/WriterTXT/WriterMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/AddNewContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/ChangeContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/ChangeContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Commentary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Commentary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/DeleterContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/FinderContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Models/Phonebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterPhonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/Presenter/ViewConsole/PrinterPhonebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInput/UInputConsole/UInCon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wch/ProjectPhonebook/UInterface/UIConsole/UInterfaceCon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674034872391</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="продолжаю заполнение javadoc">
+      <created>1674044029727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674044029727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +170,8 @@
     <MESSAGE value="осталось доработать запись телефонного справочника &#10;в 2 типа файлов.&#10;оба парсера рабочие." />
     <MESSAGE value="начаты блоки записи в файл" />
     <MESSAGE value="все блоки работают, написал сущность выбора формата считываемого файла." />
-    <option name="LAST_COMMIT_MESSAGE" value="все блоки работают, написал сущность выбора формата считываемого файла." />
+    <MESSAGE value="продолжаю заполнение javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="продолжаю заполнение javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

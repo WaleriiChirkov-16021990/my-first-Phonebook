@@ -1,5 +1,8 @@
 package com.wch.ProjectPhonebook.Models;
 
+/**
+ * Сушность описывает номера контактов
+ */
 public class Number {
 	private int numberHome = 0;
 	private int numberMobile = 0;

@@ -2,6 +2,9 @@ package com.wch.ProjectPhonebook.Presenter.ViewConsole;
 
 import com.wch.ProjectPhonebook.Models.Contact;
 
+/**
+ * Класс описывает отображение переданного экземпляру контакта в консоли
+ */
 public class PrinterContact extends Contact {
 	private Contact contact;
 	
@@ -13,6 +16,17 @@ public class PrinterContact extends Contact {
 		this.contact = contact;
 	}
 	
+	/**
+	 * Метод форматированного отображения контакта в консоли.
+	 * Пример:
+	 * Имя : Галина
+	 * Фамилия : Максакова
+	 * Дата : 13.10.1985
+	 * Домашний телефон : 4444
+	 * Мобильный телефон : 44444
+	 * Рабочий телефон : 444444
+	 * Комментарий : ноготочки
+	 */
 	public void printCtc() {
 		for (int i = 0; i < 5; i++) {
 			if (i == 0) {

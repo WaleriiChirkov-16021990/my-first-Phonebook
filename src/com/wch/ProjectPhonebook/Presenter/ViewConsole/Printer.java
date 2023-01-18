@@ -1,11 +1,18 @@
 package com.wch.ProjectPhonebook.Presenter.ViewConsole;
 
+/**
+ * Экземпляр предоставляет пользоваьелю информацию, переданную ему в виде строки, в консоль.
+ */
 public class Printer {
 	private String string;
 	
 	public Printer(String string) {
 		this.string = string;
 	}
+	
+	/**
+	 * метод песати в консоль.
+	 */
 	public void print(){
 		System.out.println(this.string);
 	}

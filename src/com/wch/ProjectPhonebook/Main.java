@@ -6,6 +6,6 @@ import java.io.IOException;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Application.runApp();
+		Application.runApp();  //запуск проекта.
 	}
 }

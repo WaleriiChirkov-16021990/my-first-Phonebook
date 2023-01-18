@@ -6,6 +6,11 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.util.ArrayList;
 
+/**
+ * Экземпляр данного класса , расширяя FinderContact умеет находить определенный контакт ( или контакты) из переданной
+ * БД ArrayList<Contact> и может изменять значения полей у данного контакта с последующим сохранением изменений.
+ * Не удаляет контакт.
+ */
 public class ChangeContact extends FinderContact{
 	
 	public ChangeContact(ArrayList<Contact> dataBase) {
@@ -16,6 +21,10 @@ public class ChangeContact extends FinderContact{
 		super();
 	}
 	
+	/**
+	 * Метод описывает взаимодействие человека в полями найденного контакта, через консоль.
+	 * Позволяет изменять поля контакта или группы найденных контактов
+	 */
 	public void changeContact() {
 		for (Contact c:
 				getFindContact()
