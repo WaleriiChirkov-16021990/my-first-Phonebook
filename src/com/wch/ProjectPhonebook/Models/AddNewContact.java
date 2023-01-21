@@ -4,13 +4,14 @@ import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Класс описывает сущность, способную создать новую объектную переменную type <Contact>
  * и добавить ее в переданную базу данных type ArrayList<Contact>/
  */
-public class AddNewContact extends Contact {
+public class AddNewContact extends Contact implements Serializable {
 	private UInCon uInCon;
 	
 	public UInCon getuInCon() {

@@ -2,12 +2,12 @@ package com.wch.ProjectPhonebook.Abstract.Class;
 
 import com.wch.ProjectPhonebook.Models.Name;
 
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  * Базовый класс людей (имя, фамилия, дата рождения)
  */
-public abstract class Human {
+public abstract class Human implements Serializable {
 	private Name name = new Name();
 	private String dateOfBirth;
 	

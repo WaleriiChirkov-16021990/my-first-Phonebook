@@ -5,11 +5,12 @@ import com.wch.ProjectPhonebook.Models.Contact;
 import com.wch.ProjectPhonebook.Models.Phonebook;
 
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 
 /**
  * класс описывает сущность для представления телефонной книги пользователю через консоль
  */
-public class PrinterPhonebook extends Phonebook {
+public class PrinterPhonebook extends Phonebook implements Serializable {
 	
 	
 	public PrinterPhonebook() throws FileNotFoundException {

@@ -1,9 +1,11 @@
 package com.wch.ProjectPhonebook.Presenter.ViewConsole;
 
+import java.io.Serializable;
+
 /**
  * Экземпляр предоставляет пользоваьелю информацию, переданную ему в виде строки, в консоль.
  */
-public class Printer {
+public class Printer implements Serializable {
 	private String string;
 	
 	public Printer(String string) {

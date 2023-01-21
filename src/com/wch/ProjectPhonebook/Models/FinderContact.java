@@ -5,13 +5,14 @@ import com.wch.ProjectPhonebook.Presenter.ViewConsole.PrinterContact;
 import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Сущность ищет контакт из переданной БД по введенным пользователем критериям.
  * В случае успеха выводит найденные контакты в консоль пользователю.
  */
-public class FinderContact extends Contact{
+public class FinderContact extends Contact implements Serializable {
 	private Contact finder = new Contact();
 	private UInCon u = new UInCon();
 	private ArrayList<Contact> dataBase;

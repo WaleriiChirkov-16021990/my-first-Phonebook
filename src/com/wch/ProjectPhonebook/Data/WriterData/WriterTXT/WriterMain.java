@@ -6,11 +6,12 @@ import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Сущность, которая предоставляет пользователю выбор формата записи БД в файл,  обновляет текущую базу в файле.
  */
-public class WriterMain {
+public class WriterMain implements Serializable {
 	private DataBase dataBase;
 	private Writer1 writer1;
 	private Writer2 writer2;

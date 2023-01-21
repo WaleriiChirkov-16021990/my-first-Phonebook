@@ -4,10 +4,12 @@ import com.wch.ProjectPhonebook.Abstract.Class.Human;
 import com.wch.ProjectPhonebook.Abstract.Interface.AbleToCall;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 
+import java.io.Serializable;
+
 /**
  * Класс описывает сущность контакт, которая содержит в себе, имя, номера и комментарий для контакта
  */
-public class Contact extends Human implements AbleToCall<Number> {
+public class Contact extends Human implements AbleToCall<Number>, Serializable {
 	private Number number = new Number();
 	private Commentary commentary =  new Commentary();
 	

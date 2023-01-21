@@ -7,11 +7,12 @@ import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Сущность, которая предоставляет пользователю выбор формата чтения БД из файла и обновляет текущую базу считанной базой.
  */
-public class ReaderMain {
+public class ReaderMain implements Serializable {
 	private UInCon uInCon;
 	private DataBase dataBase;
 	private Reader1 reader1;

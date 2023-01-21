@@ -1,10 +1,12 @@
 package com.wch.ProjectPhonebook.UInterface.UIConsole;
 
+import java.io.Serializable;
+
 /**
  * Экземпляр для хранения текстовых постоянных(констант), которые используются для навигации пользователя через консоль
  * или любое другое средство отображения и ввода информации.
  */
-public class UInterfaceCon {
+public class UInterfaceCon implements Serializable {
 	private final static String greeting = "Добро пожаловать в телефонный справочник.";
 	private final static String menuStart =    "\n1.Загрузить новую книгу из файла  " +
 										"\n2.Просмотреть текущую книгу  " +

@@ -1,12 +1,13 @@
 package com.wch.ProjectPhonebook.UInput.UInputConsole;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  * Экземпляр данного класса получает текстовую информацию , введенную пользователем через консоль,
  * хранит и передает ее для дальнйшей обработки.
  */
-public class UInCon {
+public class UInCon implements Serializable {
 	private Scanner scanner = new Scanner(System.in);
 	private String input = null;
 	

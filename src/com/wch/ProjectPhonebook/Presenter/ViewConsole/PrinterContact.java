@@ -2,10 +2,12 @@ package com.wch.ProjectPhonebook.Presenter.ViewConsole;
 
 import com.wch.ProjectPhonebook.Models.Contact;
 
+import java.io.Serializable;
+
 /**
  * Класс описывает отображение переданного экземпляру контакта в консоли
  */
-public class PrinterContact extends Contact {
+public class PrinterContact extends Contact implements Serializable {
 	private Contact contact;
 	
 	public void setContact(Contact contact) {

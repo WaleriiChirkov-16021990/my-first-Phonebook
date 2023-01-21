@@ -1,9 +1,11 @@
 package com.wch.ProjectPhonebook.Models;
 
+import java.io.Serializable;
+
 /**
  * Сушность описывает номера контактов
  */
-public class Number {
+public class Number  implements Serializable {
 	private int numberHome = 0;
 	private int numberMobile = 0;
 	private int numberWork = 0;

@@ -4,6 +4,7 @@ import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.PrinterContact;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  * БД ArrayList<Contact> и может изменять значения полей у данного контакта с последующим сохранением изменений.
  * Не удаляет контакт.
  */
-public class ChangeContact extends FinderContact{
+public class ChangeContact extends FinderContact implements Serializable {
 	
 	public ChangeContact(ArrayList<Contact> dataBase) {
 		super(dataBase);

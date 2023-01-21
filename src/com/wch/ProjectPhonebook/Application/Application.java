@@ -2,6 +2,7 @@ package com.wch.ProjectPhonebook.Application;
 
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.ReaderMain;
+import com.wch.ProjectPhonebook.Data.WriterData.WriterTXT.Writer1;
 import com.wch.ProjectPhonebook.Data.WriterData.WriterTXT.WriterMain;
 import com.wch.ProjectPhonebook.Models.*;
 import com.wch.ProjectPhonebook.Presenter.ViewConsole.Printer;
@@ -10,23 +11,34 @@ import com.wch.ProjectPhonebook.UInput.UInputConsole.UInCon;
 import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Приложение
  */
-public class Application {
+public class Application implements Serializable {
 	/**
 	 * Метод запуска
 	 * @throws IOException - возможны ошибки работы с файлами.
 	 */
-	public static void runApp() throws IOException {
+	public void runApp() throws IOException {
+		UInCon uInCon = new UInCon();
 		Reader1 reader1 = new Reader1();
-		reader1.readFile();
+		Writer1 writer1;
+		new Printer("Продолжить с последнего сеанса ?").print();
+		uInCon.UInput("y/n : ");
+		String fileLastCondition = "src/com/wch/ProjectPhonebook/Data/SaveMode/ConditionalBase.txt";
+		if (uInCon.getInput().toLowerCase().replace(" ", "").equals("y")) {
+			reader1.readFile(fileLastCondition);
+		} else {
+			reader1.readFile();
+		}
 		reader1.ghostData();
 		Phonebook phonebook = new Phonebook(reader1.getData());
-		UInCon uInCon = new UInCon();
 		new Printer(new UInterfaceCon().getGreeting()).print();
 		while (true) {
+			writer1 = new Writer1(phonebook.getDataBase());
+			writer1.recordMyPhonebook(fileLastCondition);
 			new Printer(new UInterfaceCon().getMenuStart()).print();
 			uInCon.UInput(new UInterfaceCon().getInstruction1());
 			if (uInCon.getInput().equals("1")) {     //загрузка данных из файлов

@@ -1,9 +1,6 @@
 package com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +8,7 @@ import java.util.ArrayList;
  * Парсер БД файла фотмата .txt для приведения данных к удобному виду для манипуляций.
  * Данные считываются построчно и в конечном итоге приобретают вид ArrayList<Contact>.
  */
-public class Reader2 extends Reader1{
+public class Reader2 extends Reader1 implements Serializable {
 	private String line;
 	private String temp;
 	private String[] tempArray;

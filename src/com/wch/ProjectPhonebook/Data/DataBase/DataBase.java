@@ -2,13 +2,14 @@ package com.wch.ProjectPhonebook.Data.DataBase;
 
 import com.wch.ProjectPhonebook.Models.Contact;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
 /**
  * База данных. для хранения контактов с возможностями ArrayList
  */
-public class DataBase extends ArrayList<Contact> {
+public class DataBase extends ArrayList<Contact> implements Serializable {
 	private ArrayList<Contact> dataBase = new ArrayList<Contact>();
 	
 	/**

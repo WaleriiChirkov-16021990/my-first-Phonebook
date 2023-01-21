@@ -7,11 +7,12 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * класс описывает сущность, способную открыть файл .txt и записать файлы базы данных в него, по определенной форме записи информации.
  */
-public class Writer2 extends Writer1{
+public class Writer2 extends Writer1 implements Serializable {
 	private final String file2 = "src/com/wch/ProjectPhonebook/Data/DataFile/Data.txt";
 	
 	public Writer2(DataBase dataBase) throws IOException {

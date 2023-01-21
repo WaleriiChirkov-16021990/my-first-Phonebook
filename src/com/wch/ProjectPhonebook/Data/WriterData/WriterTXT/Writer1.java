@@ -7,11 +7,12 @@ import com.wch.ProjectPhonebook.UInterface.UIConsole.UInterfaceCon;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * класс описывает сущность, способную открыть файл .txt и записать файлы базы данных в него, по определенной форме записи информации.
  */
-public class Writer1 {
+public class Writer1 implements Serializable {
 	private DataBase dataBase;
 	private FileWriter fileWriter;
 	private final String file = "src/com/wch/ProjectPhonebook/Data/DataFile/DataRow.txt";
@@ -65,6 +66,35 @@ public class Writer1 {
 				fileWriter.flush();
 			}
 			new Printer(new UInterfaceCon().getFileWrite()).print();  //показатель успешной записи файла
+		} catch (IOException e){
+			new Printer(e.getMessage()).print();
+		} finally {
+			fileWriter.close();
+		}
+	}
+	
+	public void recordMyPhonebook(String file) throws IOException {
+		String temp = "";
+		try {
+			this.fileWriter = new FileWriter(file);
+			for (Contact contact:
+					this.dataBase.getDataBase()) {
+				temp = "";
+				temp += contact.getName().getFirstName() + ",";
+				temp += contact.getName().getLastName() + ",";
+				temp += contact.getDateOfBirth() + ",";
+				temp += String.valueOf(contact.getNumber().getNumberHome()) + ",";
+				if (contact.getNumber().getNumberMobile() != 0) {
+					temp += String.valueOf(contact.getNumber().getNumberMobile()) + ",";
+				}
+				if (contact.getNumber().getNumberWork() != 0) {
+					temp += String.valueOf(contact.getNumber().getNumberWork()) + ",";
+				}
+				temp += contact.getCommentary().getComment();
+				fileWriter.write(temp);
+				fileWriter.write("\n");
+				fileWriter.flush();
+			}
 		} catch (IOException e){
 			new Printer(e.getMessage()).print();
 		} finally {

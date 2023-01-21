@@ -1,9 +1,11 @@
 package com.wch.ProjectPhonebook.Models;
 
+import java.io.Serializable;
+
 /**
  * Сущность описывает имена контактов
  */
-public class Name {
+public class Name  implements Serializable {
 	private String firstName;
 	private String lastName;
 	

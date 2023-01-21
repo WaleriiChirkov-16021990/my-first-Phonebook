@@ -4,17 +4,14 @@ import com.wch.ProjectPhonebook.Data.DataBase.DataBase;
 import com.wch.ProjectPhonebook.Models.AddNewContact;
 import com.wch.ProjectPhonebook.Models.Contact;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
  * Парсер БД файла фотмата .txt для приведения данных к удобному виду для манипуляций.
  * Данные считываются построчно и в конечном итоге приобретают вид ArrayList<Contact>.
  */
-public class Reader1 {
+public class Reader1 implements Serializable {
 	private  BufferedReader reader;
 
 	private DataBase dataBase;
@@ -23,6 +20,12 @@ public class Reader1 {
 	private ArrayList<Contact> data;
 	
 	private final String file = "src/com/wch/ProjectPhonebook/Data/DataFile/DataRow.txt";
+	
+	
+	public Reader1(BufferedReader reader) {
+		this.reader = reader;
+	}
+	
 	
 	public ArrayList<Contact> getData() {
 		return data;
@@ -47,6 +50,19 @@ public class Reader1 {
 	 */
 	public void readFile() throws IOException {
 		try{
+			while((line = reader.readLine()) != null){
+				base.add(line.split(","));
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		} finally {
+			reader.close();
+		}
+	}
+	
+	public void readFile(String file) throws IOException {
+		try{
+			this.reader = new BufferedReader(new FileReader(file));
 			while((line = reader.readLine()) != null){
 				base.add(line.split(","));
 			}

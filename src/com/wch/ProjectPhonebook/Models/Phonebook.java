@@ -5,6 +5,7 @@ import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader1;
 import com.wch.ProjectPhonebook.Data.ReaderData.ReaderTXT.Reader2;
 
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -15,7 +16,7 @@ import java.util.function.Consumer;
  * по 2 разных экземпляра чтения БД из файла, экземпляр удаления контакта и экземпляр изменения контакта.
  * Сущность хранит, передает и меняет значения имеющихся контактов.
  */
-public class Phonebook  implements Comparator<Contact>, Iterable<Contact> {
+public class Phonebook  implements Comparator<Contact>, Iterable<Contact>, Serializable {
 	
 	private DataBase dataBase;
 	private AddNewContact newContact;

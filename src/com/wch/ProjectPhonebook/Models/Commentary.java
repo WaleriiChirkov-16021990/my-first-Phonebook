@@ -1,8 +1,9 @@
 package com.wch.ProjectPhonebook.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Commentary {
+public class Commentary implements Serializable {
 	String comment = null; // Комментарий
 	Date date = null; // дата последнего изменения
 	
